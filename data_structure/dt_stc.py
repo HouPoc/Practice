@@ -1,10 +1,14 @@
+#
+#Basic Information node
+#
 class Node:
     #Initial the Node
     def __init__(self,data):
         self.data = data
         self.next = None
-     
-
+#    
+#Basic Linked List
+#
 class Linked_List:
     #Initial the Linked List with a Head Node
     def __init__(self,):
@@ -56,7 +60,9 @@ class Linked_List:
         while next_node is not None:
             print ('node {}'.format(next_node.data))
             next_node = next_node.next   
-
+#
+#Merge_Sort
+#
 def Merge_Sort(list_head):
     # Base Case
     if list_head is None or list_head.next is None:
@@ -112,3 +118,44 @@ def Half(source, front_half, back_half):
         slow.next = None
         front_half.data = source.data
         front_half.next = source.next
+
+#
+#Basic Stack (array as the stack holder)i
+#Stack is underflow when it is completely empty
+#Stack is overflow when it is completely full
+
+class Stack():
+    def __init__(self, length):
+        self.root = [] 	               #root is an empty array
+        self.indicator = -1            #Show stack status
+        self.length = length
+   
+    def Push(self, item):
+        if self.indicator != self.length:
+            self.root.append(item)
+            self.indicator += 1 
+        else:
+            print("stack is overflow") 
+         
+    def Pop (self):
+        if self.indicator != -1:
+            self.root.pop()
+            self.indicator -= 1
+        else:
+            print ("stack is underflow")
+    
+    def Check (self):
+        print (self.root)
+        print (self.indicator)   
+        
+                      
+
+
+
+
+
+
+
+
+
+
