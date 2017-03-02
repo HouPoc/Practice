@@ -119,8 +119,8 @@ def Half(source, front_half, back_half):
         front_half.data = source.data
         front_half.next = source.next
 
-#
-#Basic Stack (array as the stack holder)i
+#FILO 
+#Basic Stack (array as the form float uMix;uniform float uMix;stack holder)i
 #Stack is underflow when it is completely empty
 #Stack is overflow when it is completely full
 
@@ -131,7 +131,7 @@ class Stack():
         self.length = length
    
     def Push(self, item):
-        if self.indicator != self.length:
+        if self.indicator != self.length - 1:
             self.root.append(item)
             self.indicator += 1 
         else:
@@ -144,11 +144,58 @@ class Stack():
         else:
             print ("stack is underflow")
     
-    def Check (self):
+    def Check ():
         print (self.root)
         print (self.indicator)   
-        
-                      
+ 
+       
+#FIFO
+#Basic Queue
+#Underflow: Queue is Completely empty
+#Overflow: Queue is Completely full
+#Operations: Enqueue, Dequeue, Peek, isFull, isEmpty
+class Queue():
+    def __init__(self,length):
+        self.root = []
+        self.indicator = -1
+        self.length = length                     
+  
+    def isFull(self):
+        if self.indicator == self.length - 1:
+            print("queue is overflow")
+            return True
+        else:
+            return False
+     
+    def isEmpty(self):
+        if self.indicator == -1:
+            print("queue is underflow")
+            return True
+        else:
+            return False
+
+    def Enqueue(self, data):
+        if not self.isFull(): 
+            self.root.append(data)
+            self.indicator += 1
+
+    def Dequeue(self):
+        if not self.isEmpty():
+            self.root.pop(0)
+            self.indicator -= 1
+
+    def Peek(self):
+        print (self.root[0])     
+
+    def Check(self):
+        print (self.root)
+        print (self.indicator)       
+
+
+
+
+
+
 
 
 

@@ -8,7 +8,7 @@ def test(list):
 
 if __name__ == "__main__":
     choice = str(sys.argv[1])
-    if choice is "LL":
+    if choice is "L":
         demo_list = Linked_List()
         for num in range(1, 11):
             item = randint(2, 100)
@@ -29,5 +29,15 @@ if __name__ == "__main__":
                 demo_stack.Pop()
                 checker -=1
         demo_stack.Check()
-            
+    if choice is "Q":
+        demo_queue =Queue(5)
+        for num in range (1,10):
+            number = randint(2,100) 
+            print(number)      
+            if number%2 == 0:
+                demo_queue.Enqueue(number)
+            else:
+                demo_queue.Dequeue()
+        demo_queue.Check()
+        demo_queue.Peek()
      
