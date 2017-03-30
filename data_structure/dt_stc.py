@@ -191,8 +191,15 @@ class Queue():
         print (self.root)
         print (self.indicator)       
 
-
-
+#Priority Queue in heap (array form)
+#array[0] is always the root
+#For array[k], its left child array->[2k], its right child->array[2k+1] 
+#For array[k], its parent->array[k/2]
+#Each child must be less than its parent. 
+#Each row must be filled before going to the next row
+#Add an element, then compare with its parent and change position if needed
+#After Removing the highest priority one, move the last one to the root position. and switch it with its larger child
+#Operation: Intial, Insert, Remove, Peek
 
 
 
