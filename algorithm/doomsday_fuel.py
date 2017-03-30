@@ -1,4 +1,4 @@
-from fractions import Fraction
+from fractions import *
 
 def solution(matrix):
     # State_chain
@@ -17,7 +17,9 @@ def solution(matrix):
     # Calculate the probalities of each terminate state
     # temp probalities
     calculate_probability(matrix,sum_per_state,terminate_state_probability, 0, state_chain, [1,1])
+    result = standard_answer(terminate_state_probability)
     print terminate_state_probability
+    print result
     
     
 def calculate_probability(matrix, sum_per_state, terminate_state_probability, row_index, state_chain, temp_p):
@@ -27,7 +29,8 @@ def calculate_probability(matrix, sum_per_state, terminate_state_probability, ro
     previous_denominator = temp_p[1]
     for element in state:
         if element != 0:
-            if element in state_chain:
+            if element_index in state_chain:
+                print ("find a cycle")
                 # initial involved variables
                 del state_chain[:]
             else:
@@ -48,13 +51,30 @@ def calculate_probability(matrix, sum_per_state, terminate_state_probability, ro
                     # empty the state chain
                     del state_chain[:]
                 else:
-                    
                     calculate_probability(matrix, sum_per_state, terminate_state_probability, element_index, state_chain,[numerator_now, denominator_now])
         element_index += 1           
             
-    
+def standard_answer(probability_dic):
+    dic_len = len(probability_dic)
+    result_array = []
+    number_list = []
+    for key, value in probability_dic.iteritems():
+        number_list.append(value[1])
+    n = len(number_list)  
+    while n != 1:
+        number = number_list.pop()
+        number_list[0] = number * number_list[0] / gcd (number_list[0],number)
+        print number_list[0]
+        n = len(number_list)
+    LCM = number_list[0]
+    for key, value in probability_dic.iteritems():
+        numerator = value[0]*LCM/value[1]
+        result_array.append(numerator)
+    result_array.append(LCM)
+    return result_array
 
 def main ():
+    #010001, 400320
     matrix = [[0,2,1,0,0],[0,0,0,3,4],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
     solution(matrix)
     #print result
