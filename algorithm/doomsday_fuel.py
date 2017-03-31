@@ -18,8 +18,7 @@ def solution(matrix):
     # temp probalities
     calculate_probability(matrix,sum_per_state,terminate_state_probability, 0, state_chain, [1,1])
     result = standard_answer(terminate_state_probability)
-    print terminate_state_probability
-    print result
+    return result
     
     
 def calculate_probability(matrix, sum_per_state, terminate_state_probability, row_index, state_chain, temp_p):
@@ -30,7 +29,7 @@ def calculate_probability(matrix, sum_per_state, terminate_state_probability, ro
     for element in state:
         if element != 0:
             if element_index in state_chain:
-                print ("find a cycle")
+                #print ("find a cycle")
                 # initial involved variables
                 del state_chain[:]
             else:
@@ -39,8 +38,8 @@ def calculate_probability(matrix, sum_per_state, terminate_state_probability, ro
                 denominator = previous_denominator * sum_per_state[row_index]
                 numerator_now = Fraction(numerator, denominator).numerator
                 denominator_now = Fraction(numerator, denominator).denominator
-                print ('row: {row}, element: {element}'.format(row = row_index, element = element_index))
-                print [previous_numerator, previous_denominator]
+                #print ('row: {row}, element: {element}'.format(row = row_index, element = element_index))
+                #print [previous_numerator, previous_denominator]
                 if sum_per_state[element_index] == 0:
                     numerator = terminate_state_probability[element_index][0]
                     denominator = terminate_state_probability[element_index][1]
@@ -64,20 +63,23 @@ def standard_answer(probability_dic):
     while n != 1:
         number = number_list.pop()
         number_list[0] = number * number_list[0] / gcd (number_list[0],number)
-        print number_list[0]
+        #print number_list[0]
         n = len(number_list)
     LCM = number_list[0]
+    sum = 0
     for key, value in probability_dic.iteritems():
         numerator = value[0]*LCM/value[1]
+        sum += numerator
         result_array.append(numerator)
-    result_array.append(LCM)
+    result_array.append(sum)
     return result_array
 
 def main ():
     #010001, 400320
-    matrix = [[0,2,1,0,0],[0,0,0,3,4],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
-    solution(matrix)
-    #print result
+    #matrix = [[0,2,1,0,0],[0,0,0,3,4],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]]
+    matrix = [[0,1,0,0,0,1],[4,0,0,3,2,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]]
+    result = solution(matrix)
+    print result
 
 if __name__ == "__main__":
     main()
