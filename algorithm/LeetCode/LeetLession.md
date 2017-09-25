@@ -1,11 +1,6 @@
 # LeetCode Lesson
 
 
-## This Document aims to show reflections of each LeetCode problmes done by the author.
-
-### Problems Done 
-
-#
 
 * **[Judge Route Circle - 657](https://leetcode.com/problems/judge-route-circle/description/)**
     * Hint
