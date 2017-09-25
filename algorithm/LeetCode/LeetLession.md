@@ -1,4 +1,4 @@
-#LeetCode Lesson
+# LeetCode Lesson
 
 
 ## This Document aims to show reflections of each LeetCode problmes done by the author.
