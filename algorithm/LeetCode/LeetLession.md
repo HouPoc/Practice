@@ -35,6 +35,10 @@
         
         greedy subtraction -- subtract the largest available dividend (dividend - divisor ^ n) and repeat. 
         
+    * Analysis
+        * O(nlog(n)) run time.
+        * O(1) Memory.
+        
         
     
 
