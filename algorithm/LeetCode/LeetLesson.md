@@ -45,9 +45,9 @@
 
         This problem is *easy* level.
 
-        The sister only can get the half amount of candies so that the candies types she holds is less than that.
+        The sister only can get **the half amount** of candies so that the candies types she holds is less than that.
 
-        If there is no enough candy types, she can only choose existing types of candies.
+        If there is no enough candy types, she can only choose **existing types of candies**.
 
         Otherwise, her candies is not duplicated.
 
@@ -71,7 +71,7 @@
 
         This problem is *easy* level.
 
-        This is a simple SQL query.
+        This is a simple SQL query with UPDATE and CASE.
 
         Be careful about requirements.
 
@@ -83,6 +83,24 @@
                               ELSE 'f'
                               END)
         ```
+
+* **[Not Boring Movie - 620](https://leetcode.com/problems/not-boring-movies/description/)**
+
+    * Hit
+
+        This problem is *easy* level
+
+        Simple SQL query with SELECT, WHERE and ORDER... DESC.
+
+    * MySQL Query
+
+        ```sql
+            SELECT id, movie, description, rating FROM cinema
+                WHERE (id%2 <> 0 AND description != 'boring')
+                ORDER BY rating DESC
+        ```
+
+
 
 
 
