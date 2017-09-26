@@ -38,8 +38,53 @@
     * Analysis
         * O(nlog(n)) run time.
         * O(1) Memory.
-        
-        
-    
+
+*   **[Distribute Candies - 575](https://leetcode.com/problems/distribute-candies/description/)**
+
+    * Hint
+
+        This problem is *easy* level.
+
+        The sister only can get the half amount of candies so that the candies types she holds is less than that.
+
+        If there is no enough candy types, she can only choose existing types of candies.
+
+        Otherwise, her candies is not duplicated.
+
+    * Analysis
+
+        * O(n) run time because we need to count the list
+        * O(1) memory. No other list needed
+
+    * Python built-in functions
+
+        ```python
+           #get unique candy list
+           set()
+           #count list element
+           len()
+        ```
+
+*   **[Swap Salary - 627](https://leetcode.com/problems/swap-salary/description/)**
+
+    * Hit
+
+        This problem is *easy* level.
+
+        This is a simple SQL query.
+
+        Be careful about requirements.
+
+    * MySQL Query
+        ```sql
+            UPDATE salary a
+                SET a.sex = ( CASE WHEN a.sex = 'f'
+                              THEN 'm'
+                              ELSE 'f'
+                              END)
+        ```
+
+
+
 
      
