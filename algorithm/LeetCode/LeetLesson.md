@@ -106,7 +106,7 @@
 
         This problem is *easy* level
 
-        This problem test the understanding of binary tree
+        This problem tess the understanding of binary tree
 
         The binary tree is ordered, leaf less than the node is in left.
 
@@ -117,7 +117,19 @@
         O(log(2)) time complexity
 
         O(1) space complexity
+* **[Set Matrix Zeros](https://leetcode.com/problems/set-matrix-zeroes/description/)**
 
+    * Hint
+
+        This problem is *medium* level
+
+        It tests the understanding of matrix operations
+
+        Instead of storing the zeroes' locations, we can directly modified the matrix
+
+    * Analysis
+        O(MN) run time complexity
+        O(1) memory
 
 
 
