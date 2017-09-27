@@ -67,7 +67,7 @@
 
 *   **[Swap Salary - 627](https://leetcode.com/problems/swap-salary/description/)**
 
-    * Hit
+    * Hint
 
         This problem is *easy* level.
 
@@ -86,7 +86,7 @@
 
 * **[Not Boring Movie - 620](https://leetcode.com/problems/not-boring-movies/description/)**
 
-    * Hit
+    * Hint
 
         This problem is *easy* level
 
@@ -99,6 +99,24 @@
                 WHERE (id%2 <> 0 AND description != 'boring')
                 ORDER BY rating DESC
         ```
+
+* **[Trim a Binary Tree - 669](https://leetcode.com/problems/trim-a-binary-search-tree/description/)**
+
+    * Hint
+
+        This problem is *easy* level
+
+        This problem test the understanding of binary tree
+
+        The binary tree is ordered, leaf less than the node is in left.
+
+        Otherwise, it goes right.
+
+    * Analysis
+
+        O(log(2)) time complexity
+
+        O(1) space complexity
 
 
 
