@@ -117,7 +117,7 @@
         O(log(2)) time complexity
 
         O(1) space complexity
-* **[Set Matrix Zeros](https://leetcode.com/problems/set-matrix-zeroes/description/)**
+* **[Set Matrix Zeros - 73](https://leetcode.com/problems/set-matrix-zeroes/description/)**
 
     * Hint
 
