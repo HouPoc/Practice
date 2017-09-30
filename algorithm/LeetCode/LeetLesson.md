@@ -114,9 +114,8 @@
 
     * Analysis
 
-        O(log(2)) time complexity
-
-        O(1) space complexity
+        * O(log(2)) time complexity
+        * O(1) space complexity
 * **[Set Matrix Zeros - 73](https://leetcode.com/problems/set-matrix-zeroes/description/)**
 
     * Hint
@@ -128,8 +127,8 @@
         Instead of storing the zeroes' locations, we can directly modified the matrix
 
     * Analysis
-        O(MN) time complexity
-        O(1)  space complexity
+        * O(MN) time complexity
+        * O(1)  space complexity
         
 * **[Reshape the Matrix - 566](https://leetcode.com/problems/reshape-the-matrix/description/)**
     
@@ -141,8 +140,31 @@
         
     * Analysis
     
-        O(Row*Col) time complexity
-        O(Row*Col) space complexity
+        * O(Row*Col) time complexity
+        * O(Row*Col) space complexity
+        
+* **[Find Peak Element - 162](https://leetcode.com/problems/find-peak-element/description/)**
+    
+    * Hint
+    
+       This problem is *medium* level
+       
+       It test the understanding of binary search and the situation analysis
+       
+       Start with the best case
+       
+       Move forward to a normal case
+       
+       Then, end with a worst case to test the algorithm
+       
+       Consider end situations
+       
+       Understand the problem and 
+       
+    * Analysis
+    
+        * O(log(n)) time complexity
+        * O(1) space complexity
         
 
 
