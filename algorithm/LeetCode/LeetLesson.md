@@ -12,8 +12,8 @@
         it should **have same amount of opposed moves** 
     
     * Analysis
-        * O(n) run time. Linearly count moves in four directions
-        * O(1) Memory. No extra space created
+        * O(n) time complexity. 
+        * O(1) space complexity.
          
  
  
@@ -36,8 +36,8 @@
         greedy subtraction -- subtract the largest available dividend (dividend - divisor ^ n) and repeat. 
         
     * Analysis
-        * O(nlog(n)) run time.
-        * O(1) Memory.
+        * O(nlog(n)) time complexity.
+        * O(1) space complexity.
 
 *   **[Distribute Candies - 575](https://leetcode.com/problems/distribute-candies/description/)**
 
@@ -53,8 +53,8 @@
 
     * Analysis
 
-        * O(n) run time because we need to count the list
-        * O(1) memory. No other list needed
+        * O(n) time complexity
+        * O(1) space complexity
 
     * Python built-in functions
 
@@ -114,9 +114,8 @@
 
     * Analysis
 
-        O(log(2)) time complexity
-
-        O(1) space complexity
+        * O(log(2)) time complexity
+        * O(1) space complexity
 * **[Set Matrix Zeros - 73](https://leetcode.com/problems/set-matrix-zeroes/description/)**
 
     * Hint
@@ -128,8 +127,45 @@
         Instead of storing the zeroes' locations, we can directly modified the matrix
 
     * Analysis
-        O(MN) run time complexity
-        O(1) memory
+        * O(MN) time complexity
+        * O(1)  space complexity
+        
+* **[Reshape the Matrix - 566](https://leetcode.com/problems/reshape-the-matrix/description/)**
+    
+    * Hint
+        
+        This problem is *easy* level
+        
+        It tests the understanding of matrix operations and usage of numpy
+        
+    * Analysis
+    
+        * O(Row*Col) time complexity
+        * O(Row*Col) space complexity
+        
+* **[Find Peak Element - 162](https://leetcode.com/problems/find-peak-element/description/)**
+    
+    * Hint
+    
+       This problem is *medium* level
+       
+       It test the understanding of binary search and the situation analysis
+       
+       Start with the best case
+       
+       Move forward to a normal case
+       
+       Then, end with a worst case to test the algorithm
+       
+       Consider end situations
+       
+       Understand the problem and 
+       
+    * Analysis
+    
+        * O(log(n)) time complexity
+        * O(1) space complexity
+        
 
 
 
