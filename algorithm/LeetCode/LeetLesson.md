@@ -165,6 +165,34 @@
     
         * O(log(n)) time complexity
         * O(1) space complexity
+
+*   **[Evaluate Reverse Polish Notation - 150](https://leetcode.com/problems/evaluate-reverse-polish-notation/description/)**
+        
+    * Hint
+    
+        This problem is *medium* level
+        
+        It tests the understanding of [reverse Polish Notation](https://en.wikipedia.org/wiki/Reverse_Polish_notation)
+        
+        There are two ways to solve this problem
+            
+        * Recursive
+        * Stack
+        
+        Similar Problems: *infix notation* and *prefix notation*
+    
+    * Analysis
+    
+        * O(n) time complexity
+        * O(n) space complexity
+        
+    * New Python Function
+    
+        ```python
+           lambda x: lambda y: int(float(x) / float(y))
+           range(m, n) # return m to n-1
+
+        ```
         
 
 

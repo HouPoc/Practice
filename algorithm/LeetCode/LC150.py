@@ -14,19 +14,15 @@ class Solution(object):
         stack_o = []
         for element in tokens:
 
-            if element in ["+", "-", "*", "/"]:
-                stack_o.insert(0, element)
-            else:
+            if element not in ["+", "-", "*", "/"]:
                 stack_n.insert(0, element)
-
-        for operator in stack_o:
-            operand_2 = stack_n.pop(0)
-            operand_1 = stack_n.pop(0)
-            print(operand_1, operand_2)
-            result = ops[operator](operand_1)(operand_2)
-            print(result)
-            stack_n.insert(0, str(int(result)))
-
+            else:
+                operand_2 = stack_n.pop(0)
+                operand_1 = stack_n.pop(0)
+                print(operand_1, operand_2)
+                result = ops[element](operand_1)(operand_2)
+                print(result)
+                stack_n.insert(0, str(int(result)))
         return int(stack_n.pop())
 
 if __name__ == "__main__":
