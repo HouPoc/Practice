@@ -194,6 +194,32 @@
 
         ```
         
+*   **[Second Highest Salary - 176](https://leetcode.com/problems/second-highest-salary/discuss/)**
+
+    * Hint
+        
+        This problem is *easy* level
+        
+        It implements **desc limit offset** to order the table and select the second highest value
+         
+*   **[Maxium Average Subarray - 643](https://leetcode.com/problems/maximum-average-subarray-i/description/)**    
+     
+    * hint
+        
+        * This is a *easy* level problem 
+        * Can be solved with **brute force approach** or **[Window Sliding Algorithm](http://www.geeksforgeeks.org/window-sliding-technique/)** 
+    
+    * Analysis
+    
+        * O(n) time complexity for window Sliding Algorithm
+        * O(Nk) time complexity for the Brute force approach
+        
+    * Python Note
+        * **Get a sublist from a list with nums[m:n] (nums[m] is inclusive, nums[n] does not return)**
+        * python negative infinity number **float("-inf")** postive infinity number **float("inf")**
+        
+    
+        
 
 
 
